@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+       
+    <div data-gjs="navbar" class="navbar" id="i00h">
+    <div class="navbar-container" id="i31f">
+      <div id="i1zh" class="navbar-burger">
+        <div class="navbar-burger-line">
+        </div>
+        <div class="navbar-burger-line" id="irdb">
+        </div>
+        <div class="navbar-burger-line">
+        </div>
+      </div>
+      <div data-gjs="navbar-items" class="navbar-items-c" id="ikmd">
+        <nav data-gjs="navbar-menu" class="navbar-menu">
+          <a href="{%url 'Users_list' %}" class="navbar-menu-link" class="io53g">Home</a>
+          <a href="#" class="navbar-menu-link" class="io53g" onclick="refresh()">Refresh</a>
+          <a href="{%url 'new_Entry' %}" class="navbar-menu-link" class="io53g">Add new</a>
+        </nav>
+      </div>
+    </div>
+    </div>
+  
+      {% block content %}
+      <p>I'm at Home.</p>
+      {% endblock content %}
+
+    <script src="{% static 'script.js' %}"></script>
+    <script>var items = document.querySelectorAll('#i1zh');
+      for (var i = 0, len = items.length; i < len; i++) {
+        (function(){
+          var e,t=0,n=function(){
+            var e,t=document.createElement("void"),n={
+              transition:"transitionend",OTransition:"oTransitionEnd",MozTransition:"transitionend",WebkitTransition:"webkitTransitionEnd"};
+            for(e in n)if(void 0!==t.style[e])return n[e]}
+          (),r=function(e){
+            var t=window.getComputedStyle(e),n=t.display,r=(t.position,t.visibility,t.height,parseInt(t["max-height"]));
+            if("none"!==n&&"0"!==r)return e.offsetHeight;
+            e.style.height="auto",e.style.display="block",e.style.position="absolute",e.style.visibility="hidden";
+            var i=e.offsetHeight;
+            return e.style.height="",e.style.display="",e.style.position="",e.style.visibility="",i}
+          ,i=function(e){
+            t=1;
+            var n=r(e),i=e.style;
+            i.display="block",i.transition="max-height 0.25s ease-in-out",i.overflowY="hidden",""==i["max-height"]&&(i["max-height"]=0),0==parseInt(i["max-height"])?(i["max-height"]="0",setTimeout(function(){
+              i["max-height"]=n+"px"}
+    ,10)):i["max-height"]="0"}
+          ,a=function(r){
+            if(r.preventDefault(),!t){
+              var a=this.closest("[data-gjs=navbar]"),o=a.querySelector("[data-gjs=navbar-items]");
+              i(o),e||(o.addEventListener(n,function(){
+                t=0;
+                var e=o.style;
+                0==parseInt(e["max-height"])&&(e.display="",e["max-height"]="")}
+                                         ),e=1)}
+          };
+          "gjs-collapse"in this||this.addEventListener("click",a),this["gjs-collapse"]=1
+        }
+         .bind(items[i]))();
+      }
+    </script>
+  </body>
+</html>

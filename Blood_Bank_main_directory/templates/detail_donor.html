@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Donor Detail
+{% endblock title %}
+
+
+{% block content %}
+    <div class="textIn">
+        <ul>
+            <li>{{donor.name}}</li>
+            <li>{{donor.gender}}</li>
+            <li>{{donor.blood_group}}</li>
+            <li>{{donor.contact}}</li>
+            <li>{{donor.cnic}}</li>
+            <li>{{donor.address}}</li>
+        </ul>
+    </div>
+{% endblock content %}
+    

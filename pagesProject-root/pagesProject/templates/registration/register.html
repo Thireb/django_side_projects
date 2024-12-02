@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    User Registration
+{% endblock title %}
+    
+
+{% block sidenav %}
+    <li><a href="/">Home</a></li>
+{% endblock sidenav %}
+    
+
+{% block content %}
+    <h1>User Registration</h1>
+    <p>Enter your username and password to register.</p>
+
+
+    <form action="" method="post">
+    <table>
+
+        {{form.as_table}}
+        <td>
+
+            <tr>&nbsp;</tr>
+            <tr><input type="submit" value="register"></tr>
+        </td>
+    </table>
+    <input type="hidden" name="next" value="{{ next }}" />
+    {% csrf_token %}
+    </form>
+{% endblock content %}
+    

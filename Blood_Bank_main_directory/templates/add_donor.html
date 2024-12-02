@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Add Donor
+{% endblock title %}
+
+
+
+{% block content %}
+    <div class="textIn">
+        <h1>Add a New Donor</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">+Add</button>
+        </form>
+    </div>
+{% endblock content %}
+    

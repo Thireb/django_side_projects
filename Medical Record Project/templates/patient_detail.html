@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    <title>Patient Detail</title>
+{% endblock title %}
+    
+
+{% block content %}
+        <h2>Name: {{patient_detail.patient_name}}</h2>
+        <ul>
+            <li>Gender: {{patient_detail.gender}}</li>
+            <li>Age: {{patient_detail.age}}</li>
+            <li>Date of Checkup: {{patient_detail.date_of_checkup}}</li>
+            <li>Doctor Attending: {{patient_detail.doctor_attending}}</li>
+            <li>Address: {{patient_detail.address}}</li>
+            <li>Presenting Complaint: {{patient_detail.presenting_complaint}}</li>
+            <li>History of Presenting: {{patient_detail.history_of_presenting_complaint}}</li>
+            <li>Systemic Inquiry: {{patient_detail.systemic_inquiry}}</li>
+            <li>Past Medical History: {{patient_detail.past_medical_history}}</li>
+            <li>Past Surgical History: {{patient_detail.past_surgical_history}}</li>
+            <li>Drug History: {{patient_detail.drug_history}}</li>
+            <li>Allergies: {{patient_detail.allergies}}</li>
+            <li>Travel History: {{patient_detail.travel_history}}</li>
+            <li>Blood transfusion History: {{patient_detail.blood_transfusion_history}}</li>
+            <li>Sexual History: {{patient_detail.sexual_history}}</li>
+            <li>CNS Examination: {{patient_detail.cns_examination}}</li>
+            <li>Higher Mental Functions: {{patient_detail.higher_mental_functions}}</li>
+            <li>Cranial Nerves: {{patient_detail.cranial_nerves}}</li>
+            <li>Motor System: {{patient_detail.motor_system}}</li>
+            <li>Sensory system: {{patient_detail.sensory_system}}</li>
+            <li>Cerebellum: {{patient_detail.cerebellum}}</li>
+            <li>SOMI: {{patient_detail.somi}}</li>
+            <li>GAIT: {{patient_detail.gait}}</li>
+            <li>Back Tenderness: {{patient_detail.back_tenderness}}</li>
+
+
+
+        </ul>
+        <a href="{%url 'patient_edit' patient_detail.pk%}">+ Edit</a>
+        <a href="{%url 'patient_delete' patient_detail.pk%}">- Delete</a>
+
+{% endblock content %}
+    

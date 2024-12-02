@@ -1,0 +1,26 @@
+{% extends 'home.html' %}
+{% block content %}
+<!-- <h1>New Entry</h1> -->
+<!-- <form method='POST'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type='submit' value='Save'>
+    
+</form> -->
+
+
+<div id="iy7cj" class="row">
+    <div id="i4nko" class="cell">
+        <div id="i7ohe" class="heading">Add new
+            <br/>
+        </div>
+    <div id="i62nk">
+        <form method="POST" id="i43qm">
+            {% csrf_token %}
+            {{form.as_p}}        
+            <p class='dateformat'>Date Format: yyyy-mm-dd</p>
+            <button class="button" type="submit">Create</button>
+        </form>
+</div>
+</div>
+{% endblock content %}

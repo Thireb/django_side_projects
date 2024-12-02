@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+{% block content %}
+<!-- <h1>Delete</h1>
+
+<form method='POST'>
+    {% csrf_token %}
+    <p>Are you sure you want to delete?</p>
+    <input type='submit' value='Confirm'> 
+</form> -->
+
+<div id="iy7cj" class="row">
+    <div id="i4nko" class="cell">
+      <div id="i7ohe" class="heading">Delete?
+        <br/>
+      </div>
+      <div id="i62nk">
+        <form method="POST" id="i43qm">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button class="button" type="submit">Delete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

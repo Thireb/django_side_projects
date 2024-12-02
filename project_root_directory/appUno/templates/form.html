@@ -1,0 +1,15 @@
+
+
+
+{% if submitted %}
+    <p>
+        You've successfully submitted the form.
+    </p>
+{% else %}
+    
+<form action='' method = "Post" novalidate>
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type='Submit' value='Submit'>
+</form>
+{% endif %}

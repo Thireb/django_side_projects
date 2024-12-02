@@ -1,0 +1,17 @@
+{% extends 'base.html' %}   
+
+
+{% block title %}
+    <title>Patient list</title>
+{% endblock title %}
+    
+    {% block content %}
+        
+        {% for patient in patient_list%}
+            <h1><a href="{% url 'patient_detail' patient.id%}"">{{patient.patient_name}}</a></h1>
+            <ul>
+                <li>{{patient.date_of_checkup}} | {{patient.age}} | {{patient.gender}}</li>
+            </ul>
+        {% endfor %}
+    {% endblock content %}
+        

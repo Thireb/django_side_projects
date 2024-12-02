@@ -1,0 +1,28 @@
+{% extends 'home.html' %} {% block content %}
+
+{% comment %} {{obj.id}} {% endcomment %}
+
+<div id="iy7cj" class="row">
+  <div id="i4nko" class="cell">
+    <div id="i7ohe" class="heading">Contacts
+      <br/>
+    </div>
+    <div id="i5hz8" class="row">
+      <div id="i0ina" class="cell">
+        {% for obj in object_list %}
+        <div id="iisll">
+          <div class="name">{{obj.name}}</div>
+          <div class="phone_number">+92{{obj.phone}}</div>
+          <div class="amount">{{obj.debtAmount}}</div>
+          <div class="date">{{obj.debtDate.day}}/{{obj.debtDate.month}}/{{obj.debtDate.year}}</div>
+          <button type="button" href="" class="button"><a href="{% url 'Users_list_update' obj.id %}" id="itmhl">Update</a></button>
+          <button type="button" class="button"><a href="{% url 'delete_entry' obj.id %}">Delete</a></button>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+     
+{% endblock content %}

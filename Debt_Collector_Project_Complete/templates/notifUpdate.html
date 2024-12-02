@@ -1,0 +1,45 @@
+{% extends 'home.html' %} 
+{% block content %}
+
+<div id="iy7cj" class="row">
+  <div id="i4nko" class="cell">
+    <div id="i7ohe" class="heading">Update
+      <br/>
+    </div>
+    <div id="i62nk">{% load crispy_forms_tags %}
+      <form action="" method="post" id="idwqk">
+        {% csrf_token %}
+        {{form|crispy}}
+        <!-- <input type="submit" value="Update"/> -->
+        <p class='dateformat'>Date Format: yyyy-mm-dd</p>
+        <button class="button" type="submit">Update</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+<!-- {% load crispy_forms_tags %}
+
+<form action="" method="post">
+
+    {% csrf_token %}
+    {{form|crispy}}
+    <input type="submit" value="Update">
+</form> -->
+
+<!-- {% for obj in object_list %}
+    <div class="row" id="idq6f">
+      <div class="cell" id="ituto">
+        <div id="ib7ms">
+          <div class="contactlist">
+            <form action="" method="post">
+
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="Update">
+            </form>
+          </div>
+        </div>
+      </div>
+    {% endfor %}  -->

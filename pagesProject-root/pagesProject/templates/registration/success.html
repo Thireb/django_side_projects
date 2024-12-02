@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    User Regitration Success
+{% endblock title %}
+    
+
+{% block sidenav %}
+    <li> <a href="/">Home</a> </li>
+{% endblock sidenav %}
+    
+
+{% block content %}
+    <h1>User Regitratin Success</h1>
+    <p>You have successfully registered.</p>
+
+
+    <p>click <a href="{ % url 'login' % }?next=/">here</a> to login.</p>
+{% endblock content %}
+    

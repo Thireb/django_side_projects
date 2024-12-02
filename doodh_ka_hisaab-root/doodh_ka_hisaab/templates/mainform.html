@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>MILK ENTRY FORM</title>
+  </head>
+  <body>
+    <div class="container">
+      {% block formcontent %}
+      <form action="">
+        
+        
+          <div class="litr">
+          <label for="">Litres</label>
+          <br />
+          <input type="number" name="milk-a" id="milk_a" />
+        </div>
+        <div class="dateEntry">
+          <label for="">Date</label>
+          <br />
+          <input type="date" name="whatdate" id="what_date" />
+        </div>
+          
+        <h1>PlaceHolder</h1>
+        
+        <input type="button" value="Submit" class="bn" />
+      </form>
+        {% endblock formcontent %}
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yoga</title>
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbarContainer">
+            <div class="navbarLeft">
+                <div class="brandName">Blood Bank Club</div>
+            </div>
+            <div class="navbarRight">
+                {% block navlinks %}
+                    <a href="{% url 'home' %}">Home</a>
+                    <a href="{% url 'add-donor' %}">Register</a>
+                    <a href="{% url 'list-donor' %}">See Details</a>
+                {% endblock navlinks %}
+            </div>
+        </div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>
